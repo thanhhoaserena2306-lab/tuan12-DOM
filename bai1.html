@@ -6,6 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <ul id="myList">
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+        <li>Item D</li>
+        <li>Item E</li>
+    </ul>
+
+    <script>
+        const listItems = document.querySelectorAll("#myList li");
+
+        listItems.forEach((item, index) => {
+            // Thêm số thứ tự
+            const newText = (index + 1) + ". " + item.textContent;
+            item.textContent = newText;
+
+            // Đổi màu chữ thành xanh dương
+            item.style.color = "blue";
+        });
+    </script>
 </body>
 </html>
